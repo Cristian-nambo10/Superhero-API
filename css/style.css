@@ -21,11 +21,18 @@ article {
     /* align-self: center; */
 }
 
-.search {
+#search {
     cursor: pointer;
     position: absolute;
     left: 78%;
     top: 40px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 
