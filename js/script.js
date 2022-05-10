@@ -1,19 +1,12 @@
 // Test access token 
-let accessToken = '338148107599656';
+// let accessToken = '338148107599656';
+
 // Making my URL for API
+    // const logic = document.getElementById('text-box').value;
 
-const val = document.getElementById('text-box').value
-const url = 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/powerstats/';
-// const apiUrl = 'https://superheroapi.com/api/3328323083897178/search/'+val;
-// let xhrRequest = new XMLHttpRequest();
+    // const url = `https://www.superheroapi.com/api.php/338148107599656/${logic}/powerstats`;
 
-// xhrRequest.onload = function () {
-//     let result = JSON.parse(xhrRequest.response);
-//     let names = reult.results;
-// }
 
-// xhrRequest.open("get", 'http://superheroapi.com/api.php/338148107599656/search/name/'+userInput);
-// xhrRequest.send();
 
 // Make my jQuery variables
 let $name = $('#name');
@@ -28,18 +21,24 @@ let $input = $('input[type="text"]')
 $form.on('submit', handleGetData)
 
 
-// A function
+// A function for my stats
 
 function handleGetData(e) {
     e.preventDefault()  
     const userInput = $input.val();
+    const logic = document.getElementById('text-box').value;
+    const url = `https://www.superheroapi.com/api.php/338148107599656/${logic}/powerstats`;
 
-    $.ajax(url + userInput).then(function(data) {
-        console.log('data is ready!')
+
+    $.ajax(url).then(function(data) {
+        // console.log('data is ready!')
         console.log(data)
 
-        $name.text(data.Name);
-        $strength.text(data.strength)
-        $speed.text(data.speed)
+        $name.text(data.name);
+        $strength.text(data.strength);
+        $speed.text(data.speed);
+        $power.text(data.power);
+        $combat.text(data.combat);
     }) 
 }
+
