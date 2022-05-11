@@ -94,6 +94,33 @@ function imageData(e) {
 
 }
 
+// More variables
+let $gender = $('.gender')
+let $race = $('.race')
+let $height = $('.height')
+let $weight = $('.weight')
+
+// Styling DOM elements
+const gender = document.querySelector('.gender')
+gender.style.color = '#FDE311';
+gender.style.fontSize = '26px';
+gender.style.fontFamily = 'helvetica';
+
+const race = document.querySelector('.race')
+race.style.color = '#FDE311';
+race.style.fontSize = '26px';
+race.style.fontFamily = 'helvetica';
+
+const height = document.querySelector('.height')
+height.style.color = '#FDE311';
+height.style.fontSize = '26px';
+height.style.fontFamily = 'helvetica';
+
+const weight = document.querySelector('.weight')
+weight.style.color = '#FDE311';
+weight.style.fontSize = '26px';
+weight.style.fontFamily = 'helvetica';
+
 
 $form.on('submit', getLooks)
 
@@ -103,7 +130,10 @@ function getLooks(e) {
     const app = `https://www.superheroapi.com/api.php/338148107599656/${userInput}/appearance`;
 
     $.ajax(app).then(function(data) {
-        
+        $gender.text(data.gender);
+        $race.text(data.race);
+        $height.text(data.height);
+        $weight.text(data.weight);
     })
 
 }
