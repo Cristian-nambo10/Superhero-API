@@ -12,6 +12,10 @@ article {
    font-size: 20px;
 }
 
+h1 {
+    font-family: 'Tapestry', cursive;
+}
+
 #text-box {
    position: absolute;
    left: 45%;
@@ -37,6 +41,9 @@ article {
 
 main {
     padding-left: 40px;
+    padding-top: 20px;
 }
+
+
 
 
