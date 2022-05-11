@@ -95,6 +95,8 @@ function imageData(e) {
 }
 
 
+$form.on('submit', getLooks)
+
 function getLooks(e) {
     e.preventDefault();
     userInput = $input.val();
