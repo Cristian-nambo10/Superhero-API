@@ -18,6 +18,27 @@ let $image = $('.image')
 let $form = $('form');
 let $input = $('input[type="text"]')
 
+// Stylling for DOM elements ....
+const mainName = document.querySelector('#name')
+mainName.style.color = '#FDE311';
+mainName.style.fontSize = '26px';
+
+const strength = document.querySelector('.strength')
+strength.style.color = '#FDE311';
+strength.style.fontSize = '26px';
+
+const speed = document.querySelector('.speed')
+speed.style.color = '#FDE311';
+speed.style.fontSize = '26px';
+
+const power = document.querySelector('.power')
+power.style.color = '#FDE311';
+power.style.fontSize = '26px';
+
+const combat = document.querySelector('.combat')
+combat.style.color = '#FDE311';
+combat.style.fontSize = '26px';
+
 // Now I need event listener ...
 $form.on('submit', handleGetData)
 
