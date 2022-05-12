@@ -1,13 +1,6 @@
 // Test access token 
 // let accessToken = '338148107599656';
 
-// Making my URL for API
-    // const logic = document.getElementById('text-box').value;
-
-    // const url = `https://www.superheroapi.com/api.php/338148107599656/${logic}/powerstats`;
-
-    
-
 // Make my jQuery variables
 let $name = $('#name');
 let $strength = $('.strength');
@@ -17,35 +10,41 @@ let $combat = $('.combat');
 let $image = $('.image')
 let $form = $('form');
 let $input = $('input[type="text"]')
-let $article = $('.appearance')
+let $div = $('.appearance')
+let $mainContent = $('.main-image');
 
 // Stylling for DOM elements ....
 const mainName = document.querySelector('#name')
 mainName.style.color = '#FDE311';
-mainName.style.fontSize = '26px';
+// mainName.style.fontSize = '26px';
 mainName.style.fontFamily = 'helvetica';
 
 const strength = document.querySelector('.strength')
 strength.style.color = '#FDE311';
-strength.style.fontSize = '26px';
+// strength.style.fontSize = '26px';
 strength.style.fontFamily = 'helvetica';
 
 
 const speed = document.querySelector('.speed')
 speed.style.color = '#FDE311';
-speed.style.fontSize = '26px';
+// speed.style.fontSize = '26px';
 speed.style.fontFamily = 'helvetica';
 
 
 const power = document.querySelector('.power')
 power.style.color = '#FDE311';
-power.style.fontSize = '26px';
+// power.style.fontSize = '26px';
 power.style.fontFamily = 'helvetica';
 
 const combat = document.querySelector('.combat')
 combat.style.color = '#FDE311';
-combat.style.fontSize = '26px';
+// combat.style.fontSize = '26px';
 combat.style.fontFamily = 'helvetica';
+
+
+// Remove my child elements ...
+
+
 
 // Now I need event listener ...
 $form.on('submit', statsData)
@@ -55,10 +54,10 @@ let userInput = $input.val();
 
 function statsData(e) {
     e.preventDefault()  
+
     userInput = $input.val();
-    // const logic = document.getElementById('text-box').value;
+
     const url = `https://www.superheroapi.com/api.php/338148107599656/${userInput}/powerstats`;
-    // const imgUrl = `https://www.superheroapi.com/api.php/338148107599656/${userInput}/image`;
 
     $.ajax(url).then(function(data) {
         // console.log('data is ready!')
@@ -69,8 +68,6 @@ function statsData(e) {
         $speed.text(data.speed);
         $power.text(data.power);
         $combat.text(data.combat);
-        
-        // $('main').append(`<img src="${data.url}"/>`)
     }) 
 }
 
@@ -81,15 +78,14 @@ function imageData(e) {
     e.preventDefault();
     userInput = $input.val();
     const imgUrl = `https://www.superheroapi.com/api.php/338148107599656/${userInput}/image`;
-    if (userInput === true) {
-        return userInput.empty();
-    }
+  
 
     $.ajax(imgUrl).then(function(data) {
         console.log('data is ready!')
         console.log(data)
 
-        $('main').append(`<img src="${data.url}"/>`)
+        $mainContent.append(`<img src="${data.url}"/>`)
+        
     })
 
 }
@@ -103,22 +99,22 @@ let $weight = $('.weight')
 // Styling DOM elements
 const gender = document.querySelector('.gender')
 gender.style.color = '#FDE311';
-gender.style.fontSize = '26px';
+// gender.style.fontSize = '26px';
 gender.style.fontFamily = 'helvetica';
 
 const race = document.querySelector('.race')
 race.style.color = '#FDE311';
-race.style.fontSize = '26px';
+// race.style.fontSize = '26px';
 race.style.fontFamily = 'helvetica';
 
 const height = document.querySelector('.height')
 height.style.color = '#FDE311';
-height.style.fontSize = '26px';
+// height.style.fontSize = '26px';
 height.style.fontFamily = 'helvetica';
 
 const weight = document.querySelector('.weight')
 weight.style.color = '#FDE311';
-weight.style.fontSize = '26px';
+// weight.style.fontSize = '26px';
 weight.style.fontFamily = 'helvetica';
 
 
@@ -135,6 +131,6 @@ function getLooks(e) {
         $height.text(data.height);
         $weight.text(data.weight);
     })
-
+    $mainContent.empty();
 }
 
