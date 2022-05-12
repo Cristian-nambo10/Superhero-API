@@ -61,18 +61,40 @@ main {
 color: black;
 }
 
-@media (max-width: 1920px) {
+#guess {
+    width: 450px;
+}
+
+@media (max-width: 1440px) {
     main {
         justify-content: center;
+    }
+
+    .stats {
+        font-size: 35px;
     }
 
     #appearance {
         position: absolute;
         right: 70%;
+        left: 50%;
+        font-size: 40px;
     }
+
+    .gender {
+        padding-right: 50px;
+        }
+    
+    .race {
+        padding-right: 50px;
+        }
+    
+    .height {
+        padding-right: 50px;
+        }
 }
 
-@media (max-width: 1054px) {
+@media (max-width: 1024px) {
     main {
         justify-content: center;
     }
@@ -80,14 +102,30 @@ color: black;
     #appearance {
        position: absolute;
        right: 80%;
-       bottom: 50%;
+       top: 80%;
+       flex-direction: row;
+       left: 50%;
+   }
+
+   .gender {
+    padding-right: 50px;
     }
-}
+
+.race {
+    padding-right: 50px;
+    }
+
+.height {
+    padding-right: 50px;
+    }
+ }
 
 
-@media (max-width: 866px) {
+
+@media (max-width: 768px) {
     main {
         justify-content: center;
+        height: 60vh;
     }
 
     #appearance {
@@ -131,6 +169,24 @@ color: black;
     }
 
 
+}
+
+@media (max-width: 320px) {
+    article {
+        width: 42vh;
+    }
+
+    #search {
+        top: 99%;
+    width: 80px;
+    left: 50%;
+    }
+
+    #main-image {
+        width: 20vh;
+        height: 50vh;
+        justify-content: flex-start;
+    }
 }
 
 
