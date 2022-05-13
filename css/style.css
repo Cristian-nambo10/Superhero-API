@@ -9,11 +9,12 @@ article {
    padding-left: 12px;
    background-color: black;
    color: white;
-   font-size: 20px;
+   /* font-size: 20px; */
 }
 
 h1 {
     font-family: 'Tapestry', cursive;
+    font-size: 10px;
 }
 
 #text-box {
@@ -40,21 +41,27 @@ h1 {
     /* font-weight: 16px; */
 }
 
+h2 {
+    font-weight: 10px;
+}
+
 main {
     display: flex;
     flex-direction: row;
-    justify-content:left;
+    justify-content:center;
+    bottom: 30%;
     padding-left: 40px;
     padding-top: 30px; 
+    height: 20vh;
 }
 
 #appearance {
      position: absolute;
   background-color: #8C92AC;
-  top: 30%;
+  top: 30%; 
   right: 30%;
   bottom: 50%;
-  display: flex;
+   display: flex; 
   flex-direction: column;
   justify-content: space-evenly;
   font-size: 20px;
@@ -121,7 +128,7 @@ color: black;
 @media (max-width: 1440px) {
     main {
         justify-content: center;
-        height: 60vh;
+        height: 50vh;
     }
 
     h1 {
@@ -135,7 +142,7 @@ color: black;
     #appearance {
         position: absolute;
        right: 80%;
-       top: 80%;
+       top: 88%;
        flex-direction: row;
        left: 50%;
        font-size: 40px;
@@ -169,7 +176,7 @@ color: black;
 @media (max-width: 1024px) {
     main {
         justify-content: center;
-        height: 60vh;
+        height: 45vh;
     }
 
     h1 {
@@ -183,7 +190,7 @@ color: black;
     #appearance {
        position: absolute;
        right: 80%;
-       top: 80%;
+       top: 82%;
        flex-direction: row;
        left: 50%;
        font-size: 30px;
@@ -228,7 +235,7 @@ color: black;
 @media (max-width: 768px) {
     main {
         justify-content: center;
-        height: 60vh;
+        height: 50vh;
     }
 
     .stats {
@@ -240,7 +247,7 @@ color: black;
         flex-direction: row;
         justify-content: space-evenly;
        position: absolute;
-       top: 80%;
+       top: 85%;
        left: 50%;
        font-size: 18px;
     }
