@@ -117,6 +117,9 @@ weight.style.color = '#FDE311';
 // weight.style.fontSize = '26px';
 weight.style.fontFamily = 'helvetica';
 
+const mainImg = document.querySelector('main-image')
+
+
 
 $form.on('submit', getLooks)
 
