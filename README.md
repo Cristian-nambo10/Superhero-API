@@ -25,7 +25,7 @@
 
 ## Explore Application
 ---
-[Click Me](www.google.com) to get started!
+[Click Me](https://storied-fudge-5aa95f.netlify.app) to get started!
 
 ## Future Updates ...
 ---
